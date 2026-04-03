@@ -1,6 +1,9 @@
 name: My First Action
 
-on: push
+on:
+  push:                    # still runs on push
+  schedule:
+    - cron: '0 9 * * *'   # AND also runs every day at 9am
 
 jobs:
   say-hello:
